@@ -68,6 +68,21 @@ function deleteItem3(){
     numItem.style.display = 'none';
 };
 
+var selectShop = document.querySelector('.header__search-select-label');
+var inshop = document.getElementById('in-shop');
+var outshop = document.getElementById('out-shop');
+
+function inShop() {
+    selectShop.innerHTML = 'Trong shop';
+    inshop.style.display = 'inline-block';
+    outshop.style.display = 'none';
+}
+
+function outShop() {
+    selectShop.innerHTML = 'Ngoài shop';
+    outshop.style.display = 'inline-block';
+    inshop.style.display = 'none';
+}
 
 
 // var i;

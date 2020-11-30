@@ -91,8 +91,8 @@
                                 Trợ giúp
                             </a>
                         </li>
-                        <li onclick="regisAcc();" class="header__navbar-item header__navbar-item--strong header__navbar-item--separate form-regis">Đăng kí</li>
-                        <li onclick="loginAcc();" class="header__navbar-item header__navbar-item--strong form-login">Đăng nhập</li>
+                        <li onclick="regisAcc()" class="header__navbar-item header__navbar-item--strong header__navbar-item--separate form-regis">Đăng kí</li>
+                        <li onclick="loginAcc()" class="header__navbar-item header__navbar-item--strong form-login">Đăng nhập</li>
 
                         <li id="account" class="header__navbar-item header__navbar-user">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShMvZoWFtNMsK2dalS1nyeSoRj9sItpBd47A&usqp=CAU" alt="" class="header__navbar-user-img">
@@ -110,7 +110,7 @@
                                 <li class="header__navbar-user-item">
                                     <a href="">Đơn mua</a>
                                 </li>
-                                <li onclick="logOut();" class="header__navbar-user-item header__navbar-user-item--separate">
+                                <li onclick="logOut()" class="header__navbar-user-item header__navbar-user-item--separate">
                                     <a href="">Đăng xuất</a>
                                 </li>
                             </ul>
@@ -149,14 +149,14 @@
                             <i class="header__search-select-icon fas fa-angle-down"></i>
                         
                             <ul class="header__search-option">
-                                <li class="header__search-option-item header__search-option-item--active">
+                                <li onclick="inShop()" class="header__search-option-item header__search-option-item--active">
                                     <span>Trong shop</span>
-                                    <i class="fas fa-check"></i>
+                                    <i id="in-shop" class="fas fa-check"></i>
                                 </li>
-                                <li class="header__search-option-item">
+                                <li onclick="outShop()" class="header__search-option-item  ">
                                     <span>Ngoài shop</span>
-                                    <i class="fas fa-check"></i>
-                                </li>
+                                    <i id="out-shop"  class="fas fa-check"></i>
+                                </li>   
                             </ul>
                         </div>
                         <button class="header__search-btn">
@@ -196,7 +196,7 @@
                                             <span class="header__cart-item-description">
                                                 Phân loại: Size L
                                             </span>
-                                            <span onclick="deleteItem1();" class="header__cart-item-remove">Xóa</span>
+                                            <span onclick="deleteItem1()" class="header__cart-item-remove">Xóa</span>
                                         </div>
                                     </div>
                                 </li>
@@ -215,7 +215,7 @@
                                             <span class="header__cart-item-description">
                                                 Phân loại: Size M
                                             </span>
-                                            <span onclick="deleteItem2();" class="header__cart-item-remove">Xóa</span>
+                                            <span onclick="deleteItem2()" class="header__cart-item-remove">Xóa</span>
                                         </div>
                                     </div>
                                 </li>
@@ -234,7 +234,7 @@
                                             <span class="header__cart-item-description">
                                                 Phân loại: Size S
                                             </span>
-                                            <span onclick="deleteItem3();" class="header__cart-item-remove">Xóa</span>
+                                            <span onclick="deleteItem3()" class="header__cart-item-remove">Xóa</span>
                                         </div>
                                     </div>
                                 </li>
@@ -308,10 +308,10 @@
                                     <span class="home-filter__page-current">1</span>/2
                                 </span>
                                 <div class="home-filter__page-control">
-                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                    <a href="#" class="home-filter__page-btn home-filter__page-btn--disabled">
                                         <i class="home-filter__page-icon fas fa-angle-left"></i>
                                     </a>
-                                    <a href="" class="home-filter__page-btn">
+                                    <a href="#" class="home-filter__page-btn">
                                         <i class="home-filter__page-icon fas fa-angle-right"></i>
                                     </a>
                                 </div>
@@ -910,7 +910,7 @@
 
     <!-- Modal layout -->
     <div class="modal">
-        <div onclick="exitModal();" class="modal__overlay">
+        <div onclick="exitModal()" class="modal__overlay">
 
         </div>
         <div class="modal__body">
@@ -920,7 +920,7 @@
                 <div class="auth-form__container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng Ký</h3>
-                        <span onclick="switchLogin();" class="auth-form__switch-btn">Đăng nhập</span>
+                        <span onclick="switchLogin()" class="auth-form__switch-btn">Đăng nhập</span>
                     </div>
                     <div class="auth-form__form">
                         <div class="auth-form__group">
@@ -941,7 +941,7 @@
                         </p>
                     </div>
                     <div class="auth-form__controls">
-                        <button onclick="exitModal();" class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
+                        <button onclick="exitModal()" class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
                         <input type="button" value="ĐĂNG KÝ" class="btn btn--primary"></input>
                     </div>
                 </div>
@@ -966,7 +966,7 @@
                 <div class="auth-form__container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng Nhập</h3>
-                        <span onclick="switchRegister();" class="auth-form__switch-btn">Đăng ký</span>
+                        <span onclick="switchRegister()" class="auth-form__switch-btn">Đăng ký</span>
                     </div>
                     <div class="auth-form__form">
                         <div class="auth-form__group">
@@ -984,8 +984,8 @@
                         </div>
                     </div>
                     <div class="auth-form__controls">
-                        <button onclick="exitModal();" class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
-                        <button onclick="successAcc();" class="btn btn--primary">ĐĂNG NHẬP</button>
+                        <button onclick="exitModal()" class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
+                        <button onclick="successAcc()" class="btn btn--primary">ĐĂNG NHẬP</button>
                     </div>
                 </div>
                 <div class="auth-form__socials">
