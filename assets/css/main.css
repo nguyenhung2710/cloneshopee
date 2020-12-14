@@ -1,6 +1,7 @@
 .header {
     height: var(--header-height);
-    background-image: linear-gradient(0, #fe6433, #f53e2d);
+    background-color: var(--primary-color);
+    /* background-image: linear-gradient(0, #fe6433, #f53e2d); */
 }
 
 .header__navbar {
@@ -671,7 +672,8 @@ img.insta:hover {
 }
 
 .header__cart-no-cart-img {
-    width: 50%;
+    width: 26%;
+    margin-left: 150px;
     display: none;
 }
 
@@ -690,7 +692,7 @@ img.insta:hover {
     padding: 1px 7px;
     font-size: 1.4rem;
     border-radius: 10px;
-    border: 2px solid #ee4d2d;
+    border: 2px solid var(--primary-color);
     line-height: 1.6rem;
     color: var(--primary-color);
     background-color: var(--white-color);
@@ -702,7 +704,7 @@ img.insta:hover {
 }
 
 .header__cart-view-cart:hover {
-    background-color: #ee6449;
+    background-color: var(--primary-color);
 }
 
 .header__search-input-wrap {
@@ -752,7 +754,7 @@ img.insta:hover {
 }
 
 .header__search-btn:hover {
-    background-color: #ee6449;
+    background-color: #d0012ae5;
     cursor: pointer;
 }
 
@@ -995,13 +997,17 @@ img.insta:hover {
     background-color: var(--white-color);
 }
 
-.home-filter__page-btn--disabled {
+.home-filter__page-btn--disabled--left {
     background-color: #f9f9f9;
-    cursor: default;
+    cursor: default; 
 }
 
-.home-filter__page-btn--disabled .home-filter__page-icon {
+.home-filter__page-btn--disabled--left .home-filter__page-icon {
     color: #cccccc;
+}
+
+.home-filter__page-btn--disabled--right {
+    cursor: pointer;
 }
 
 .home-filter__page-btn:first-child {
@@ -1009,8 +1015,17 @@ img.insta:hover {
 }
 
 .home-filter__page-icon {
-    margin: auto;
+    /* margin: auto; */
+    padding: 11px 14px;
     font-size: 1.4rem;
+    color: #606060;
+}
+
+.home-filter__page-icon--left {
+    color: #606060;
+}
+
+.home-filter__page-icon--right {
     color: #606060;
 }
 
@@ -1428,7 +1443,7 @@ hr {
 }
 
 .follow__item a:hover {
-    color: var(--mall-color);
+    color: var(--primary-color);
 }
 
 .follow__item-fb, .follow__item-insta, .follow__item-linked {
